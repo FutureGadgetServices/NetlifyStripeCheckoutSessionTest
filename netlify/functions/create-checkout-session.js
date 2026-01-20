@@ -1,11 +1,12 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-const ALLOWED_ORIGINS = [
-  'https://www.futuregadgetlabs.com',
-  'https://futuregadgetlabs.com',
-  'https://futuregadgetcollections.netlify.app',
-  'http://localhost:4000'
-];
+  const ALLOWED_ORIGINS = [
+    'https://www.futuregadgetlabs.com',
+    'https://futuregadgetlabs.com',
+    'https://futuregadgetcollections.netlify.app',
+    'https://futuregadgetcollections.github.io',
+    'http://localhost:4000'
+  ];
 
 exports.handler = async (event) => {
   const origin = event.headers.origin || event.headers.Origin;
